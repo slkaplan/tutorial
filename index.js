@@ -12,11 +12,11 @@ app.get('/tutorial', (req, res) => {
   res.send('Welcome to the Unsplash Chatbot for Zoom!')
 })
 
-app.get('/authorize', (req, res) => {
+app.get('/tutorial/authorize', (req, res) => {
   res.redirect('https://zoom.us/launch/chat?jid=robot_' + process.env.zoom_bot_jid)
 })
 
-app.get('/support', (req, res) => {
+app.get('/tutorial/support', (req, res) => {
   res.send('Contact tommy.gaessler@zoom.us for support.')
 })
 
