@@ -90,7 +90,7 @@ app.post('/tutorial/interact', (req, res) => {
   }
 })
 
-app.post('tutorial/pull', (req, res) => {
+app.post('/tutorial/pull', (req, res) => {
   if (1 == 1) {
     exec('git --work-tree=/home/bot/tutorial pull origin master', (err, stdout, stderr) => {
       if (err) {
