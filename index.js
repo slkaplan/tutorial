@@ -20,23 +20,23 @@ app.get('/tutorial/support', (req, res) => {
   res.send('Contact tommy.gaessler@zoom.us for support.')
 })
 
-app.get('/privacy', (req, res) => {
+app.get('/tutorial/privacy', (req, res) => {
   res.send('The Unsplash Chatbot for Zoom does not store any user data.')
 })
 
-app.get('/terms', (req, res) => {
+app.get('/tutorial/terms', (req, res) => {
   res.send('By installing the Unsplash Chatbot for Zoom, you are accept and agree to these terms...')
 })
 
-app.get('/documentation', (req, res) => {
+app.get('/tutorial/documentation', (req, res) => {
   res.send('Try typing "island" to see a photo of an island, or anything else you have in mind!')
 })
 
-app.get('/zoomverify/verifyzoom.html', (req, res) => {
+app.get('/tutorial/zoomverify/verifyzoom.html', (req, res) => {
   res.send(process.env.zoom_verification_code)
 })
 
-app.post('/interact', (req, res) => {
+app.post('/tutorial/interact', (req, res) => {
   getChatbotToken()
 
   function getChatbotToken () {
@@ -89,7 +89,7 @@ app.post('/interact', (req, res) => {
   }
 })
 
-app.post('/deauthorize', (req, res) => {
+app.post('/tutorial/deauthorize', (req, res) => {
   if (req.headers.authorization === process.env.zoom_verification_token) {
     res.status(200)
     res.send()
