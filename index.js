@@ -91,20 +91,16 @@ app.post('/tutorial/interact', (req, res) => {
 })
 
 app.get('/tutorial/pull', (req, res) => {
-  if (1 == 1) {
-    exec('git --work-tree=/home/bot/tutorial pull origin master', (err, stdout, stderr) => {
-      if (err) {
-        //some err occurred
-        console.error(err)
-      } else {
-        console.log(`stdout: ${stdout}`);
-        console.log(`stderr: ${stderr}`);
-      }
-    })
-    res.send('Tutorial Server has been updated.')
-  } else {
-    res.send('Error -- Server was not updated.')
-  }
+  exec('git --work-tree=/home/bot/tutorial pull origin master', (err, stdout, stderr) => {
+    if (err) {
+      //some err occurred
+      console.error(err)
+    } else {
+      console.log(`stdout: ${stdout}`);
+      console.log(`stderr: ${stderr}`);
+    }
+  })
+  res.send('Tutorial Server Updated');
 })
 
 app.post('/tutorial/deauthorize', (req, res) => {
