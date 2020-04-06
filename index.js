@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
+const exec = require('child_process')
 
 const app = express()
 const port = process.env.PORT || 8080
@@ -86,6 +87,22 @@ app.post('/tutorial/interact', (req, res) => {
         console.log(body)
       }
     })
+  }
+})
+
+app.post('tutorial/pull', (req, res) => {
+  if (1 == 1) {
+    exec('git --work-tree=/home/bot/tutorial pull origin master', (err, stdout, stderr) => {
+      if (err) {
+        //some err occurred
+        console.error(err)
+      } else {
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+    }
+    res.send('Tutorial Server has been updated.')
+  } else {
+    res.send('Error -- Server was not updated.')
   }
 })
 
