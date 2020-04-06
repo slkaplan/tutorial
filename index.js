@@ -99,6 +99,7 @@ app.post('/tutorial/pull', (req, res) => {
       } else {
         console.log(`stdout: ${stdout}`);
         console.log(`stderr: ${stderr}`);
+      }
     })
     res.send('Tutorial Server has been updated.')
   } else {
