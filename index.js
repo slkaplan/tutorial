@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
-const exec = require('child_process')
+const { exec } = require('child_process')
 
 const app = express()
 const port = process.env.PORT || 8080
