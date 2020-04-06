@@ -1,0 +1,20 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "A simple zoom chatbot based on the chatbot tutorial: https://marketplace.zoom.us/docs/guides/chatbots/build-a-chatbot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zots/tutorial.git"
+  },
+  "author": "Team Zots",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zots/tutorial/issues"
+  },
+  "homepage": "https://github.com/zots/tutorial#readme"
+}
