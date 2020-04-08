@@ -7,4 +7,4 @@ The server is hosted on digital ocean.
 
 The server auto pulls from this github.
 
-TESTING GITHUB
+TESTING ATOM
